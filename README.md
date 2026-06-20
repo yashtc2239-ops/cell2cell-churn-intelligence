@@ -55,6 +55,37 @@ streamlit run streamlit_app.py
 ---
 
 ## Architecture
+
+Raw Data (Cell2Cell, 71K subscribers)
+
+|
+
+Data Audit & Feature Engineering (Pandas)
+
+|
+
+SQL Analysis Layer (SQLite, 8 business queries)
+
+|
+
+Statistical Hypothesis Testing (Chi-Square, Mann-Whitney U, Kaplan-Meier)
+
+|
+
+ML Modeling (Logistic Regression -> Random Forest -> XGBoost Champion)
+
+|
+
+SHAP Explainability + Cost-Sensitive Threshold Optimization
+
+|
+
+Power BI Executive Dashboard (4 pages, DAX What-If Simulator)
+
+|
+
+Streamlit Web App (Dockerized, Live Scoring) <- You are here
+
 ---
 
 ## Key Findings
@@ -83,6 +114,55 @@ streamlit run streamlit_app.py
 ---
 
 ## Project Structure
+
+cell2cell-churn-intelligence/
+
+├── data/
+
+│   ├── raw/                # Source CSVs (gitignored)
+
+│   ├── processed/          # Cleaned + engineered datasets
+
+│   └── outputs/            # Charts, scored predictions, SQL exports
+
+├── notebooks/
+
+│   ├── 00_sanity_check.ipynb
+
+│   ├── 02_data_audit.ipynb
+
+│   ├── 02_5_sql_analysis.ipynb
+
+│   ├── 03_eda_hypothesis_testing.ipynb
+
+│   └── 04_modeling_pipeline.ipynb
+
+├── models/
+
+│   ├── best_model_v1.pkl    # Trained XGBoost champion
+
+│   └── scaler_v1.pkl
+
+├── dashboards/
+
+│   ├── churn_intelligence_dashboard.pbix
+
+│   └── dashboard_screenshots/
+
+├── app/
+
+│   ├── streamlit_app.py     # Live scoring web app
+
+│   └── model_loader.py
+
+├── docs/                    # BRD, data dictionary, insight memos
+
+├── Dockerfile
+
+├── requirements.txt
+
+└── README.md
+
 ---
 
 ## Methodology Phases
