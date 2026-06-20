@@ -37,15 +37,18 @@ Identified **$10.7M in realized CLV loss** and **$6.2M in at-risk ARR** across 7
 **[https://churn-intelligence-yash.streamlit.app](https://churn-intelligence-yash.streamlit.app)**
 
 ### Option 2 — Run Locally with Docker
+
 ```bash
 git clone https://github.com/yashtc2239-ops/cell2cell-churn-intelligence.git
 cd cell2cell-churn-intelligence
 docker build -t churn-intelligence .
 docker run -p 8501:8501 churn-intelligence
 ```
+
 Open `http://localhost:8501`
 
 ### Option 3 — Run Locally with Python
+
 ```bash
 pip install -r requirements.txt
 cd app
@@ -117,51 +120,51 @@ Streamlit Web App (Dockerized, Live Scoring) <- You are here
 
 cell2cell-churn-intelligence/
 
-├── data/
+|-- data/
 
-│   ├── raw/                # Source CSVs (gitignored)
+|   |-- raw/                # Source CSVs (gitignored)
 
-│   ├── processed/          # Cleaned + engineered datasets
+|   |-- processed/          # Cleaned + engineered datasets
 
-│   └── outputs/            # Charts, scored predictions, SQL exports
+|   |-- outputs/            # Charts, scored predictions, SQL exports
 
-├── notebooks/
+|-- notebooks/
 
-│   ├── 00_sanity_check.ipynb
+|   |-- 00_sanity_check.ipynb
 
-│   ├── 02_data_audit.ipynb
+|   |-- 02_data_audit.ipynb
 
-│   ├── 02_5_sql_analysis.ipynb
+|   |-- 02_5_sql_analysis.ipynb
 
-│   ├── 03_eda_hypothesis_testing.ipynb
+|   |-- 03_eda_hypothesis_testing.ipynb
 
-│   └── 04_modeling_pipeline.ipynb
+|   |-- 04_modeling_pipeline.ipynb
 
-├── models/
+|-- models/
 
-│   ├── best_model_v1.pkl    # Trained XGBoost champion
+|   |-- best_model_v1.pkl    # Trained XGBoost champion
 
-│   └── scaler_v1.pkl
+|   |-- scaler_v1.pkl
 
-├── dashboards/
+|-- dashboards/
 
-│   ├── churn_intelligence_dashboard.pbix
+|   |-- churn_intelligence_dashboard.pbix
 
-│   └── dashboard_screenshots/
+|   |-- dashboard_screenshots/
 
-├── app/
+|-- app/
 
-│   ├── streamlit_app.py     # Live scoring web app
+|   |-- streamlit_app.py     # Live scoring web app
 
-│   └── model_loader.py
+|   |-- model_loader.py
 
-├── docs/                    # BRD, data dictionary, insight memos
+|-- docs/                    # BRD, data dictionary, insight memos
 
-├── Dockerfile
+|-- Dockerfile
 
-├── requirements.txt
+|-- requirements.txt
 
-└── README.md
+|-- README.md
 
 ---
 
